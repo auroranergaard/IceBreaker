@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+# IceBreaker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is this?
 
-Currently, two official plugins are available:
+IceBreaker is a web application designed to facilitate interactive and engaging games. It leverages Firebase for backend services and React with TypeScript for the frontend. The application allows users to navigate through various games, view game details, and interact with the platform.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech stack
 
-## Expanding the ESLint configuration
+- **Frontend:**
+  - React
+  - TypeScript
+  - Vite
+  - Mantine (UI components)
+  - React Router (for routing)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Backend:**
+  - Firebase
+    - Firestore (database)
+    - Firebase Auth (authentication)
+    - Firebase Realtime Database
 
-- Configure the top-level `parserOptions` property like this:
+## Getting started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Prerequisites
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+### Installation
+
+1. **Clone the repository:**
+
+    ```sh
+    git clone https://github.com/your-username/icebreaker.git
+    cd icebreaker
+    ```
+
+2. **Install dependencies:**
+
+    ```sh
+    npm install
+    ```
+
+3. **Set up Firebase:**
+
+    - Go to [Firebase Console](https://console.firebase.google.com/) and create a new project.
+    - Copy your Firebase configuration and replace the existing configuration in [`src/Firebase/firebase.tsx`](src/Firebase/firebase.tsx).
+
+4. **Run the application:**
+
+    ```sh
+    npm run dev
+    ```
+
+### Additional Documentation
+
+- For routing details, refer to [`Routing.md`](/public/Documentation/Routing.md).
+- For emulator setup, refer to [`Emulator.md`](/public/Documentation/Emulator.md)
